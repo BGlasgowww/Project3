@@ -2,9 +2,13 @@
 #include<iostream>
 using namespace std;
 
+bTree::bTree() {
+    root = nullptr;
+}
+
 void bTree::insert(int num, node*& root) {
     
-    node* newNode;
+    node* newNode = newNode;
     newNode->val = num;
     newNode->L = newNode->R = nullptr;
 
@@ -56,4 +60,10 @@ void bTree::postDisplay(node* root) const {
     postDisplay(root->R);
     cout << root->val << " ";
 
+}
+
+bTree::~bTree() {
+    while (root != nullptr) {
+        delete root;
+    }
 }
